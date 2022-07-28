@@ -60,7 +60,7 @@ const deleteStudent = async(req, res) => {
 const oneToone = async(req, res) => {
 
     let data = await Student.findAll({
-        attributes: ['id', 'name'],
+        attributes: ['id', 'name', 'class'],
         include: [{
             model: Scholarship,
             attributes: ['id', 'scholarship_type', 'scholarship_year'],
